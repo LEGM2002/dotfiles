@@ -1,0 +1,204 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-family: "SF Pro Text", "Inter", "Segoe UI", "NotoSans Nerd Font", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@define-color primary #b26ac0;
+@define-color border #cea7d6;
+@define-color secondary #9f5cb8;
+@define-color background #64727d;
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 4px;
+    padding: 8px;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button label {
+    font-size: 12px;
+}
+
+#workspaces button:hover {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+    border-radius: 8px;
+    border: 2px solid @border;
+    background: linear-gradient(
+      135deg,
+      rgba(206, 167, 214, 0.25),
+      rgba(206, 167, 214, 0.05)
+    );
+}
+
+#workspaces button:not(.empty):not(.active) {
+    border-bottom: 2px solid #72757a;
+}
+
+#workspaces button.focused {
+    background-color: @background;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: transparent;
+}
+
+#mode {
+    background-color: @background;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#mode,
+#idle_inhibitor,
+#power-profiles-daemon,
+#mpd,
+#custom-power,
+#custom-arch,
+#custom-todo,
+#custom-pomodoro {
+    padding: 0 10px;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @primary;
+}
+
+#battery {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+/*#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}*/
+
+label:focus {
+    background-color: #000000;
+}
+
+#network,
+#pulseaudio,
+#backlight {
+    background-color: transparent;
+}
+
+#custom-media {
+    background-color: transparent;
+    color: #ffffff;
+    min-width: 20px;
+}
+
+#custom-arch,
+#custom-power {
+    font-size: 18px;
+    background-color: @secondary;
+}
+
+#custom-todo,
+#custom-pomodoro {
+    background-color: @primary;
+}
+
+#battery:hover,
+#network:hover,
+#custom-media:hover,
+#pulseaudio:hover,
+#backlight:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -3px #ffffff;
+}

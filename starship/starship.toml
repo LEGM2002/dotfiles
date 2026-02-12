@@ -1,0 +1,108 @@
+palette = "nord_purple"
+add_newline = true
+
+format = """
+$os(fg:snow_storm bg:purple_dark)\
+[](fg:purple_dark bg:purple_mid)\
+$username(fg:polar_night bg:purple_mid)\
+[](fg:purple_mid bg:purple_soft)\
+$directory\
+[](fg:purple_soft bg:purple_light)\
+$git_branch$git_status\
+[](fg:purple_light bg:purple_accent)\
+$python$nodejs$rust$lua\
+[](fg:purple_accent bg:snow_storm)\
+$cmd_duration$sudo\
+[](fg:snow_storm)\
+$line_break\
+$character
+"""
+
+[os]
+disabled = false
+format = "[ $symbol](fg:snow_storm bg:purple_dark)"
+
+[os.symbols]
+Arch = " "
+
+[username]
+show_always = true
+format = "[ $user ](fg:polar_night bg:purple_mid)"
+
+[hostname]
+ssh_only = false
+format = "[ $hostname ](fg:polar_night bg:purple_mid)"
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+format = "[ 󰉋  $path ](fg:polar_night bg:purple_soft)"
+read_only = " "
+read_only_style = "fg:polar_night bold bg:purple_soft"
+
+[git_branch]
+symbol = "󰘬 "
+format = "[ $symbol$branch ](fg:polar_night bg:purple_light)"
+
+[git_status]
+format = "[$all_status ](fg:polar_night bg:purple_light)"
+
+[python]
+symbol = "󰌠 "
+format = "[ $symbol($version )](fg:polar_night bg:purple_accent)"
+
+[lua]
+symbol = "󰢱 "
+format = "[ $symbol($version )](fg:polar_night bg:purple_accent)"
+
+[nodejs]
+symbol = "󰎙 "
+format = "[ $symbol($version )](fg:polar_night bg:purple_accent)"
+
+[rust]
+symbol = "󱘗 "
+format = "[ $symbol($version )](fg:polar_night bg:purple_accent)"
+
+[cmd_duration]
+min_time = 1000
+format = "[ 󰔚 $duration ](fg:polar_night bg:snow_storm)"
+
+[sudo]
+disabled = false
+symbol = " "
+format = "[ $symbol](fg:polar_night bg:snow_storm)"
+
+[character]
+success_symbol = "[ 󱞩](bold snow_storm)"
+error_symbol = "[ 󱞩](bold red)"
+vimcmd_symbol = "[  󱞩](bold snow_storm)"
+
+[palettes.nord]
+polar_night = "#2E3440"
+dark_gray = "#3B4252"
+gray = "#4C566A"
+snow_storm = "#D8DEE9"
+light_gray = "#E5E9F0"
+white = "#ECEFF4"
+aqua = "#8FBCBB"
+teal = "#88C0D0"
+blue = "#81A1C1"
+dark_blue = "#5E81AC"
+red = "#BF616A"
+orange = "#D08770"
+yellow = "#EBCB8B"
+green = "#A3BE8C"
+purple = "#B48EAD"
+
+[palettes.nord_purple]
+polar_night = "#2E3440"
+
+purple_dark   = "#9F5CB8"
+purple_mid    = "#B26AC0"
+purple_soft   = "#BA86C4"
+purple_light  = "#C89BC9"
+purple_accent = "#D7B2D0"
+
+snow_storm = "#D8DEE9"
+green = "#A3BE8C"
+red   = "#BF616A"

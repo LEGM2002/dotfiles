@@ -1,0 +1,66 @@
+/* Wofi Conf by LEGM2002 */
+
+window {
+    border: 2px solid #cea7d6;
+    background-color: rgba(54, 54, 54, 1.0);
+    border-radius: 12px;
+    font-family: "SF Pro Text", "Inter", "Segoe UI", "NotoSans Nerd Font", sans-serif;
+}
+
+#input {
+    margin: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#input:focus {
+    border: 2px solid #cea7d6;
+    background-color: rgba(206, 167, 214, 0.15);
+}
+
+#inner-box {
+    margin: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#entry {
+    padding: 8px;
+    margin: 2px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background: linear-gradient(
+        135deg,
+        rgba(206, 167, 214, 0.25),
+        rgba(206, 167, 214, 0.05)
+    );
+    border: 2px solid #cea7d6;
+}
+
+#text:selected {
+    color: #ffffff;
+}

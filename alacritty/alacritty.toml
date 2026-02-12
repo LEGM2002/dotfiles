@@ -1,0 +1,22 @@
+[window]
+opacity = 0.6
+decorations = "full"
+dynamic_title = true
+padding = { x = 14, y = 14 }
+startup_mode = "Windowed"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[terminal.shell]
+program = "/usr/bin/bash"
+args = []
+
+[font]
+size = 13
+offset = { x = 1, y = 1 }

@@ -1,0 +1,2 @@
+4|1|Python for DS
+6|0|Japanese
