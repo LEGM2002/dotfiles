@@ -1,7 +1,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
-    font-family: "SF Pro Text", "Inter", "Segoe UI", "NotoSans Nerd Font", sans-serif;
+    /* SF Pro and Inter for Latin text, Source Han for Japanese text and NotoSans Nerd Font for icons*/
+    font-family: "SF Pro Text", 
+    		 "Inter", 
+		 "Segoe UI",
+		 "Source Han Sans JP",
+		 "NotoSans Nerd Font", 
+		 sans-serif;
     font-size: 14px;
     font-weight: 600;
 }

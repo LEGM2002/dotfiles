@@ -1,2 +1,9 @@
-4|1|Python for DS
-6|0|Japanese
+1|1|linear algebra
+2|1|algebra
+3|1|discrete structures
+4|1|probability
+5|1|statistics
+6|1|data structures 6|0|data structures & algorithms algorithms
+7|1|programming
+8|1|calculus
+9|1|differential equations
